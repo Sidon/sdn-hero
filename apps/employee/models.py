@@ -19,11 +19,15 @@ class EmployeeManager(models.Manager):
 
 class Employee(User):
     full_name = models.CharField('Nome Completo', max_length=70)
-    companies = models.ManyToManyField(Company, verbose_name='Empresas', related_name='empresas')
+    companies = models.ManyToManyField(Company, verbose_name='Empresas',
+                                       related_name='Funcionarios')
 
     objects = EmployeeManager()
 
     def __str__(self):
+        return self.full_name
+
+    def __repr__(self):
         return self.full_name
 
     class Meta:

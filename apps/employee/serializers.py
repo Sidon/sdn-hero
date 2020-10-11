@@ -4,9 +4,10 @@ from apps.company.serializers import CompanySerializer
 
 
 class EmployeeSerializer(serializers.ModelSerializer):
-    # companies = CompanySerializer(read_only=False, many=True)
+    companies = CompanySerializer(read_only=False, many=True)
 
     class Meta:
         model = Employee
-        fields = ('id', 'username', 'email', 'companies')
+        fields = ('id', 'full_name', 'email', 'companies')
+
 

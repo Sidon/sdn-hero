@@ -10,5 +10,6 @@ class Company(models.Model):
         verbose_name = 'Empresa'
         verbose_name_plural = 'Empresas'
 
-    def __str__(self):
+    def __repr__(self):
         return self.name
+

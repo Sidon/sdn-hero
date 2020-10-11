@@ -160,7 +160,3 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': None,
 }
 
-
-
-
-print('===>>>', TEMPLATES[0]['DIRS'])
